@@ -1,0 +1,13 @@
+name: AntiDropPlus
+description: A plugin that avoids accidental drops and related item loss.
+version: 1.0.0
+author: despawningbone
+
+main: me.despawningbone.antidrop.ADMain
+softdepend: [Vault]
+
+commands:
+    antidrop:
+        description: opens a GUI for the configuration of antidrop.
+        usage: /<command> [filter/lockslot]
+        aliases: [nodrop, adp]

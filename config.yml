@@ -1,0 +1,69 @@
+# --------------------------------
+#  Antidrop+ v1.0.0 config file
+#    Created by despawningbone
+# --------------------------------
+
+# Filter options
+Filter:
+  # Blacklist types of block that you do not want being filtered.
+  # Please use Bukkit's Material list name.
+  # Use a colon after the item name to indicate the damage value if needed.
+  Filter-Blacklist:
+    #- EXAMPLE_MATERIAL
+    -
+
+  # Maximum amount of filters that a player can have.
+  # Set to -1 for infinite (not recommended).
+  Max-amount: 5
+
+  # Here you can set which click type to be blocked by the filter. 
+  # Click types can be found in this link: 
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/ClickType.html
+  Filter-click-type:
+    - CONTROL_DROP
+    - DROP
+    - SHIFT_LEFT
+    - SHIFT_RIGHT
+    - DOUBLE_CLICK
+  
+  # Here you can set which type of checks in the filter you want to disable.
+  # Available checks: Name, Lore, Exact, Type, Damage.
+  Disable-filter-check:
+    #- Exact
+    -
+
+#Slot Lock options    
+SlotLock:
+  # Maximum amount of slots to be locked.
+  # Set to -1 for infinite.
+  Max-amount: -1
+    
+  # Allow Hotbar to be slot locked?
+  Hotbar-slotlock: true
+  
+  # Allow armor slots to be locked?
+  Armor-slotlock: false
+  
+# Use permissions?
+# If not, every command will be available to all players (except reload),
+# and all bypasses (and reload) will only be available to OPs.
+Use-permissions: true
+
+# Here you can set the antidrop filter and slot lock messages' cooldown 
+# Measured in ticks (1 second = 20 ticks in optimal conditiions)
+Antidrop-message-cooldown: 100
+
+# Some servers might encounter the glowing of the GUI indicators not showing up.
+# It is most likely caused by plugin interference.
+# If that happens, turn this off.
+Glow: true
+
+# Allow player with permission adp.death.keepfilter/ado.death.keepslot (or OPs if config Use-permissions is disabled)
+# To keep their antidrop locked items even after death?
+Death-AntiDrop: false
+
+# Use economy? Vault API required.
+Eco:
+  Use: false
+  Filter-fee: 20000.0
+  SlotLock-fee: 10000.0
